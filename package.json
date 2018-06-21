@@ -1,0 +1,14 @@
+{
+  "name": "nodelabjs",
+  "version": "1.0.0",
+  "description": "Lab for NODEJS",
+  "main": "server/server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tevin Fowler",
+  "license": "ISC",
+  "dependencies": {
+    "request-promise": "^4.2.2"
+  }
+}
