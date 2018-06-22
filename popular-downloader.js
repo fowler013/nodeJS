@@ -1,4 +1,5 @@
 const path = require('path');
+const URL = require('URL')
 const fs = require('fs');
 const request = require('request-promise');
 const download = require('download-file'); //this hasn't been updated in 4 years on npm//
@@ -30,22 +31,22 @@ request('https://reddit.com/r/popular.json', (err, res, body) => {
             "type": item.data.post_hint // most use post_hint to find link//
         });
 
-        let options = { // followed the rules on the npm download-file ReadMe//
-            directory: downloadPath,
-            filename: id + path.extname(item.data.url)
-        }
+        // let options = { // followed the rules on the npm download-file ReadMe//
+        //     directory: downloadPath,
+        //     filename: id + path.extname(item.data.url)
+        // }
         //test for downloadPath
         if (item.data.post_hint == 'image') {
-            download(item.data.url, options, function (err) {
-                if (err) console.log(err);
-            });
+            let newURL = new URL(item.data.url)
+            request(item.data.url).pipe(fs.createWriteStream(path.join(downloadPath, newURL.pathname)))
+        
         }
 
         id++;
     });
 
     //write redditArray to file
-    fs.writeFileSync(dataPath, JSON.stringify(downloadArray), err => {
-        if (err) console.log(err);
-    });
+    // fs.writeFileSync(dataPath, JSON.stringify(downloadArray), err => {
+    //     if (err) console.log(err);
+    // });
 });
