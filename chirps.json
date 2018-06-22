@@ -1,12 +1,37 @@
-
+[
     {
-        "firstname": "ash"
-        ,"lastname": "catchem",
-         "id": 0,
-         "age": 13,
-         "location": "Kanto"
-         
+        "firstname": "Ash",
+        "lastname": "Ketchem",
+        "id": 0,
+        "age": 13,
+        "location": "Kanto"
+    },
+    {
+        "firstname": "gary",
+        "lastname": "oak",
+        "id": 1,
+        "age": 13,
+        "location": "Kanto"
+    },
+    {
+        "firstname": "Brock",
+        "lastname": "Bolder",
+        "id": 2,
+        "age": 30,
+        "location": "Kanto"
+    },
+    {
+        "firstname": "Misty",
+        "lastname": "Water",
+        "id": 3,
+        "age": 19,
+        "location": "Kanto"
+    },
+    {
+        "firstname": "Sam",
+        "lastname": "Oak",
+        "id": 4,
+        "age": 44,
+        "location": "Kanto"
     }
-
-    
-  
+]

@@ -9,6 +9,8 @@
   "author": "Tevin Fowler",
   "license": "ISC",
   "dependencies": {
+    "download-file": "^0.1.5",
+    "request": "^2.87.0",
     "request-promise": "^4.2.2"
   }
 }
