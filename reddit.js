@@ -25,7 +25,7 @@ request('https://reddit.com/r/popular.json', (err, res, body) => {
 
 
     //fs.writeFileSync ALLOWS ME TO WRITE A FILE ON TO MY JSON//
-    fs.writeFileSync(dataPath, JSON.stringify(redditArray), err => {
+    fs.writeFile(dataPath, JSON.stringify(redditArray), err => {
         if (err) console.log(err);
     });
 });
